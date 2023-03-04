@@ -26,7 +26,7 @@ resource storageAccounts 'Microsoft.Storage/storageAccounts@2021-04-01-preview' 
   name: 'example4'
 }]
 
-resource storageAccounts3 'Microsoft.Storage/storageAccounts/blobServices@2021-01-01' = [for item in [1,2]: if(true) {
+resource storageAccounts3 'Microsoft.Storage/storageAccounts/blobServices@2022-09-01' = [for item in [1,2]: if(true) {
   name: 'example5'
 }]
 
