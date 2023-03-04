@@ -22,10 +22,10 @@ resource storageAccount3 'Microsoft.Storage/storageAccounts@2021-04-01' = if (tr
   name: 'example3'
 }
 
-resource storageAccounts 'Microsoft.Storage/storageAccounts@2021-04-01' = [for item in [1,2]: {
+resource storageAccounts 'Microsoft.Storage/storageAccounts@2021-04-01-preview' = [for item in [1,2]: {
   name: 'example4'
 }]
 
-resource storageAccounts3 'Microsoft.Storage/storageAccounts@2021-04-01' = [for item in [1,2]: if(true) {
+resource storageAccounts3 'Microsoft.Storage/storageAccounts/blobServices@2021-01-01' = [for item in [1,2]: if(true) {
   name: 'example5'
 }]
