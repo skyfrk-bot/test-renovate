@@ -29,3 +29,16 @@ resource storageAccounts 'Microsoft.Storage/storageAccounts@2021-04-01-preview' 
 resource storageAccounts3 'Microsoft.Storage/storageAccounts/blobServices@2021-01-01' = [for item in [1,2]: if(true) {
   name: 'example5'
 }]
+
+resource symbolicname 'Microsoft.Portal/dashboards@2015-08-01-preview' = {
+  name: 'string'
+  location: 'string'
+  tags: {
+    tagName1: 'tagValue1'
+    tagName2: 'tagValue2'
+  }
+  properties: {
+    lenses: {}
+    metadata: {}
+  }
+}
