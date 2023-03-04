@@ -42,3 +42,44 @@ resource symbolicname 'Microsoft.Portal/dashboards@2015-08-01-preview' = {
     metadata: {}
   }
 }
+
+module storageAccount '../storageAccount.bicep' = {
+  name: 'example'
+}
+
+module storageAccount '../storageAccount.json' = {
+  name: 'example'
+}
+
+module hw 'br/public:samples/hello-world:1.0.2' = {
+  name: 'helloWorld'
+  params: {
+    name: 'John Dole'
+  }
+}
+
+module stgModule 'br:exampleregistry.azurecr.io/bicep/modules/storage:v1' = {
+  name: 'storageDeploy'
+  params: {
+    storagePrefix: 'examplestg1'
+  }
+}
+
+module stgModule 'ts/ContosoSpecs:storageSpec:2.0' = {
+  name: 'storageDeploy'
+  params: {
+    storagePrefix: 'examplestg1'
+  }
+}
+
+module stgModule '../storageAccount.bicep' = [for item in collection: {
+  name: 'example'
+}]
+
+module stgModule '../storageAccount.bicep' = if (true) {
+  name: 'example'
+}
+
+module stgModule '../storageAccount.bicep' = [for item in collection: if(true) {
+  name: 'example'
+}]
