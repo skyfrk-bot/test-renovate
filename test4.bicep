@@ -1,4 +1,4 @@
-resource account 'Microsoft.DocumentDB/databaseAccounts@2015-11-06' = {
+resource account 'Microsoft.DocumentDB/databaseAccounts@2022-11-15-preview' = {
   name: toLower(accountName)
   kind: 'GlobalDocumentDB'
   location: location
