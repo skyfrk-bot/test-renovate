@@ -1,1 +1,1 @@
-resource symbolicname 'Microsoft.ContainerRegistry/registries@2021-12-01-preview' = {}
+resource symbolicname 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {}
