@@ -1,4 +1,4 @@
-resource symbolicname 'Microsoft.Kusto/clusters@2019-05-15' = {
+resource symbolicname 'Microsoft.Kusto/clusters@2022-12-29' = {
   name: 'string'
   location: 'string'
   tags: {
