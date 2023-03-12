@@ -30,7 +30,7 @@ resource storageAccounts3 'Microsoft.Storage/storageAccounts/blobServices@2021-0
   name: 'example5'
 }]
 
-resource symbolicname 'Microsoft.Portal/dashboards@2015-08-01-preview' = {
+resource symbolicname 'Microsoft.Portal/dashboards@2020-09-01-preview' = {
   name: 'string'
   location: 'string'
   tags: {
